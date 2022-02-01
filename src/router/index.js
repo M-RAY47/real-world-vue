@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import EventCreate from "../views/EventCreate.vue";
+import eventCreate from "../views/EventCreate.vue";
 import EventList from "../views/EventList.vue";
 import EventShow from "../views/EventShow.vue";
 
@@ -12,12 +12,12 @@ const routes = [
   {
     path: "/event",
     name: "event-show",
-    component: "EventShow",
+    component: EventShow,
   },
   {
     path: "/event/create",
     name: "event-create",
-    component: "EventCreate",
+    component: eventCreate,
   },
 ];
 
