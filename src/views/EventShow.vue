@@ -8,10 +8,9 @@
 <script>
 import EventCreate from '@/components/EventCreate.vue';
 export default {
-	pcomponents: {
-		EventCreate, 
-		},
-	}
+  components: {
+    EventCreate,
+  },
 };
 </script>
 
