@@ -8,7 +8,7 @@
 <script>
 import EventCreate from '@/components/EventCreate.vue';
 export default {
-	props: {
+	pcomponents: {
 		EventCreate, 
 		},
 	}
