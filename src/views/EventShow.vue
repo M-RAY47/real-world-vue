@@ -2,17 +2,18 @@
   <h1>Hello Show Event</h1>
   <div>
     <router-link :to="{ name: 'event-create' }">Create</router-link>
+    <EventCard />
   </div>
 </template>
 
 <script>
-import EventCreate from '@/components/EventCreate.vue';
+import EventCard from "@/components/EventCard.vue";
+
 export default {
   components: {
-    EventCreate,
+    EventCard,
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>
