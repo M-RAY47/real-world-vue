@@ -1,18 +1,9 @@
 <template>
-  <h1>Hello Show Event</h1>
-  <div>
-    <router-link :to="{ name: 'event-create' }">Create</router-link>
-    <EventCard />
-  </div>
+  <h1>Showing event #{{ id }}</h1>
 </template>
-
 <script>
-import EventCard from "@/components/EventCard.vue";
-
 export default {
-  components: {
-    EventCard,
-  },
+  props: ["id"],
 };
 </script>
 
