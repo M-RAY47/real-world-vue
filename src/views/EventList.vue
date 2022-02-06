@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Events List</h1>
     <EventCard />
   </div>
 </template>
