@@ -6,7 +6,6 @@ import router from "./router";
 import store from "./store";
 import BaseIcon from "@/components/BaseIcon.vue";
 
-
 createApp(App)
   .use(store)
   .use(router)
