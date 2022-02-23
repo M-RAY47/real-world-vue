@@ -1,4 +1,4 @@
-import { Vue, createApp } from "vue";
+import { Vue } from "vue";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
 import App from "./App.vue";
@@ -21,4 +21,8 @@ requireComponent.keys().forEach((fileName) => {
   Vue.component(componentName, componentConfig.default || componentConfig);
 });
 
-createApp(App).use(store).use(router).mount("#app");
+new Vue({
+  router,
+  store,
+  render: (h) => h(App),
+}).$mount("#app");
