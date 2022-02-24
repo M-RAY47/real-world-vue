@@ -18,9 +18,8 @@ requireComponent.keys().forEach((fileName) => {
     camelCase(fileName.replace(/^\.\/(.*)\.\w+$/, "$1"))
   );
 
-  // Vue.component(componentName, componentConfig.default || componentConfig);
+  Vue.component(componentName, componentConfig.default || componentConfig);
 });
-Vue.component(componentName, componentConfig.default || componentConfig);
 
 new Vue({
   router,
