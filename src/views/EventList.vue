@@ -24,7 +24,7 @@ export default {
       this.events = res.data;
     })
     .catch((err) => {
-      console.log("This is the err:" + err.res);
+      console.log("This is the err:" + err.message);
     });
   },
 };
