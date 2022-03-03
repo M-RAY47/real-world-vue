@@ -6,6 +6,9 @@
       <h5>Organized by{{ event.Organizer }}</h5>
       <h5>Category: {{ event.Category }}</h5>
     </div>
+    <BaseIcon name="map">
+      <h2>Location</h2>
+    </BaseIcon>
   </div>
 </template>
 <script>
