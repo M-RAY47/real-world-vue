@@ -17,7 +17,7 @@
 
     <h2>
       Attendees
-      <span class="badge -fillgradient">{{ event.attendees.length }}</span>
+      <span class="badge -fillgradient">{{ event.attendees? event.attendees.length: 0 }}</span>
     </h2>
 
     <ul class="list-group">
