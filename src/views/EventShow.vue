@@ -19,6 +19,12 @@
       Attendees
       <span class="badge -fillgradient">{{ event.attendees.length }}</span>
     </h2>
+
+    <ul class="list-group">
+      <li v-for="(attendee, i) in event.attendees" :key="i" class="list-item">
+        <b>{{ attendee.name }}</b>
+      </li>
+    </ul>
   </div>
 </template>
 <script>
