@@ -1,8 +1,12 @@
 <template>
-  <div class="evebt-header">
-    <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
-    <h1> {{ event.title }}</h1>
-    <h5>Organized by{{ event.Organizer }}</h5>
+  <div>
+    <div class="evebt-header">
+      <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
+      <h1 class="title"> {{ event.title }}</h1>
+      <h5>Organized by{{ event.Organizer }}</h5>
+      <h5>Category: {{ event.Category }}</h5>
+    </div>
+  </div>
 </template>
 <script>
 import EventService from "@/services/EventService.js";
