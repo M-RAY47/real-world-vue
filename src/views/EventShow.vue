@@ -13,6 +13,12 @@
     <address> {{ event.location }}</address>
 
     <h2> Event details</h2>
+    <p>{{ event.description }}</p>
+
+    <h2>
+      Attendees
+      <span class="badge -fillgradient">{{ event.attendees.length }}</span>
+    </h2>
   </div>
 </template>
 <script>
