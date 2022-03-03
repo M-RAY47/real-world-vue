@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="evebt-header">
-      <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
+      <span class="eyebrow">@{{ event.time }} on {{ event.date | date }}</span>
       <h1 class="title"> {{ event.title }}</h1>
-      <h5>Organized by{{ event.Organizer }}</h5>
-      <h5>Category: {{ event.Category }}</h5>
+      <h5>Organized by{{ event.organizer ? event.organizer.name : '' }}</h5>
+      <h5>Category: {{ event.category }}</h5>
     </div>
     <BaseIcon name="map">
       <h2>Location</h2>
