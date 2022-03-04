@@ -30,23 +30,12 @@
   </div>
 </template>
 <script>
-import EventService from "@/services/EventService.js";
-
 export default {
   props: {
     event: {
       type: Object,
       required: true,
     },
-  },
-  created() {
-    EventService.getEvent(this.id)
-      .then((res) => {
-        this.event = res.data;
-      })
-      .catch((err) => {
-        console.log("There is an error:", err.response);
-      });
   },
 };
 </script>
