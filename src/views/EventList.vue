@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Events List</h1>
-    <EventCard v-for="event in events" :key="event.id" :event="event"/>
+    <EventCard v-for="event in events" :key="event.id" :event="event" />
     <BaseIcon />
   </div>
 </template>
@@ -12,7 +12,6 @@ import EventService from "@/services/EventService.js";
 export default {
   components: {
     EventCard,
-    EventService,
   },
   data() {
     return {
@@ -20,12 +19,13 @@ export default {
     };
   },
   created() {
-    EventService.getEvents().then((res) => {
-      this.events = res.data;
-    })
-    .catch((err) => {
-      console.log("This is the err:" + err.message);
-    });
+    EventService.getEvents()
+      .then((res) => {
+        this.events = res.data;
+      })
+      .catch((err) => {
+        console.log("This is the err:" + err.message);
+      });
   },
 };
 </script>
