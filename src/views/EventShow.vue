@@ -17,7 +17,9 @@
 
     <h2>
       Attendees
-      <span class="badge -fillgradient">{{ event.attendees ? event.attendees.length: 0 }}</span>
+      <span class="badge -fillgradient">
+        {{ event.attendees ? event.attendees.length : 0 }}
+      </span>
     </h2>
 
     <ul class="list-group">
@@ -31,7 +33,12 @@
 import EventService from "@/services/EventService.js";
 
 export default {
-  props: ["id"],
+  props: {
+    event: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       event: {},
@@ -40,10 +47,10 @@ export default {
   created() {
     EventService.getEvent(this.id)
       .then((res) => {
-        this.event= res.data;
+        this.event = res.data;
       })
       .catch((err) => {
-        console.log('There is an error:', err.response);
+        console.log("There is an error:", err.response);
       });
   },
 };
