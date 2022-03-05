@@ -39,11 +39,6 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      event: {},
-    };
-  },
   created() {
     EventService.getEvent(this.id)
       .then((res) => {
@@ -56,4 +51,23 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.location {
+  margin-bottom: 0;
+}
+.location > .icon {
+  margin-left: 10px;
+}
+.event-header {
+  margin: 0;
+}
+.event-group {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.event-group > .list-item {
+  padding: 1em 0;
+  border-bottom: solid 1px #e5e5e5;
+}
+</style>
