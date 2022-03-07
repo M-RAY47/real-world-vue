@@ -30,5 +30,9 @@ export default {
   white-space: nowrap;
   transition: all 0.2s linear;
 }
+.button:hover {
+  -webkit-transform: scale(1.02);
+  transition: scale(1.02);
+}
 
 </style>
