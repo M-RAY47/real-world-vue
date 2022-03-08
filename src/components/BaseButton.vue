@@ -35,10 +35,13 @@ export default {
   transition: scale(1.02);
   box-shadow: 0 7px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.buttton:active{
+.buttton:active {
   -webkit-transform: scale(1);
   transform: scale(1);
   box-shadow: : none;
+}
+.button:focus {
+  outline: 0;
 }
 
 </style>
