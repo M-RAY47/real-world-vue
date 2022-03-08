@@ -43,5 +43,11 @@ export default {
 .button:focus {
   outline: 0;
 }
+.button:disabled {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  box-shadow: none;
+}
+
 
 </style>
