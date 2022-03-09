@@ -59,5 +59,12 @@ export default {
   background: rbga(0 , 0, 0, 0.5);
   colr: #ffffff;
 }
+.button.-size-small {
+  height: 32px;
+}
+.button.-icon-right {
+  text-align: left;
+  padding: 0 20px;
+}
 
 </style>
