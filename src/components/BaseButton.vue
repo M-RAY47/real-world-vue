@@ -66,5 +66,17 @@ export default {
   text-align: left;
   padding: 0 20px;
 }
-
+.button.-icon-right > .icon {
+  margin-left: 10px;
+}
+.button.-icon-left {
+  text-align: right;
+  padding: 0 20px;
+}
+.button.-icon-left > .icon {
+  margin-right: 10px;
+}
+.button.-icon-center {
+  padding: 0 20px;
+}
 </style>
