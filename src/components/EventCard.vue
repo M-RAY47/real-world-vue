@@ -13,12 +13,10 @@
 
 <script>
 export default {
-  data() {
-    return {
+  pros: {
       event: Object,
-    };
-  },
-};
+  }
+}
 </script>
 
 <style scoped>
