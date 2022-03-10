@@ -13,10 +13,10 @@
 
 <script>
 export default {
-  pros: {
-      event: Object,
-  }
-}
+  props: {
+    event: Object,
+  },
+};
 </script>
 
 <style scoped>
