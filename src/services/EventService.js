@@ -14,6 +14,6 @@ export default {
     return apiClient.get('/events')
   },
   getEvent(id) {
-    return apiClient.get('/events/' + id)
+    return apiClient.get("/events/" + id)
   }
 }
