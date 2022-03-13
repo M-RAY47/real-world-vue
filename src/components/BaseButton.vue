@@ -62,7 +62,7 @@ export default {
   color: #ffffff;
 }
 .button.-fill-gray {
-  background: rbga(0 , 0, 0, 0.5);
+  background: rbga(0, 0, 0, 0.5);
   color: #ffffff;
 }
 .button.-size-small {
