@@ -17,9 +17,9 @@ export default {
   props: {
     buttonClass: {
       type: String,
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
