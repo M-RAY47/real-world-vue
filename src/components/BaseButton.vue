@@ -32,7 +32,7 @@ export default {
   border: none;
   border-radius: 6px;
   text-align: center;
-  font-weigt: 600;
+  font-weight: 600;
   white-space: nowrap;
   transition: all 0.2s linear;
 }
