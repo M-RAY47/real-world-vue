@@ -16,7 +16,7 @@ export default {
   inheritAttrs: false,
   props: {
     buttonClass: {
-      type: string,
+      type: String,
     }
   }
 }
