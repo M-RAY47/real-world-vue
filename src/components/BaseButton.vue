@@ -44,7 +44,7 @@ export default {
 .buttton:active {
   -webkit-transform: scale(1);
   transform: scale(1);
-  box-shadow: : none;
+  box-shadow: none;
 }
 .button:focus {
   outline: 0;
