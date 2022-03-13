@@ -32,7 +32,7 @@ export default {
   border: none;
   border-radius: 6px;
   text-align: center;
-  font-weigt:600;
+  font-weigt: 600;
   white-space: nowrap;
   transition: all 0.2s linear;
 }
@@ -63,7 +63,7 @@ export default {
 }
 .button.-fill-gray {
   background: rbga(0 , 0, 0, 0.5);
-  colr: #ffffff;
+  color: #ffffff;
 }
 .button.-size-small {
   height: 32px;
