@@ -37,6 +37,9 @@ export default {
       required: true,
     },
   },
+  data() {
+    event: [],
+  }
 };
 </script>
 
