@@ -32,8 +32,8 @@
 <script>
 export default {
   props: {
-    event: {
-      type: Object,
+    id: {
+      type: String Number,
       required: true,
     },
   },
