@@ -38,7 +38,9 @@ export default {
     },
   },
   data() {
-    event: [],
+    return {
+      event: [],
+    }
   },
 };
 </script>
