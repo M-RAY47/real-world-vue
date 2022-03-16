@@ -50,7 +50,7 @@ export default {
         this.event = res.data;
       })
       .catch((err) => {
-        console.log(err.message);
+        console.log("This is the err:" + err.message);
       });
   },
 };
