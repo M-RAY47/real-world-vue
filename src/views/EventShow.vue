@@ -30,6 +30,8 @@
   </div>
 </template>
 <script>
+import EventService from "@/services/EventService.js";
+
 export default {
   props: {
     id: {
@@ -42,6 +44,9 @@ export default {
       event: [],
     };
   },
+  create() {
+  EventService.getEvent(this.id)    
+  }
 };
 </script>
 
