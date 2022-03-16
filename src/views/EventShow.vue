@@ -45,7 +45,7 @@ export default {
     };
   },
   create() {
-  EventService.getEvent(this.id)    
+    EventService.getEvent(this.id);
   }
 };
 </script>
