@@ -35,7 +35,7 @@ import EventService from "@/services/EventService.js";
 export default {
   props: {
     id: {
-      type: Number,
+      type: String,
       required: true,
     },
   },
@@ -44,9 +44,15 @@ export default {
       event: [],
     };
   },
-  create() {
-    EventService.getEvent(this.id);
-  }
+  created() {
+    EventService.getEvent(this.id)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  },
 };
 </script>
 
