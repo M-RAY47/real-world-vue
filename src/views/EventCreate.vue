@@ -1,5 +1,5 @@
 <template>
-  <h1>Create an Event, {{ $storeIndex.user }}</h1>
+  <h1>Create an Event, {{ $store_index.user }}</h1>
 </template>
 
 <script>
