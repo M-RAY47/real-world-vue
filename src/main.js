@@ -3,7 +3,7 @@ import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store/index.js";
+import store from "./store";
 
 const app = createApp(App);
 const requireComponent = require.context(
