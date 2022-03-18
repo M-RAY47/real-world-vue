@@ -5,7 +5,7 @@ export default createStore({
     user: {
       id: "abcd123",
       name: "M.RAY",
-    }
+    },
   },
   mutations: {},
   actions: {},
