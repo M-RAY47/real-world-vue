@@ -5,15 +5,13 @@
 </template>
 
 <script>
-  export default {
+export default {
   computed: {
     userName() {
       return this.$store.state.user.name;
-    }
-  }    
-  }
+    },
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
