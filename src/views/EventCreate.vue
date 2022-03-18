@@ -1,9 +1,19 @@
 <template>
-  <h1>Create an Event, {{ $store.state.user }}</h1>
+  <div>
+    <h1>Create an Event, {{ userName }}</h1>
+  </div>
 </template>
 
 <script>
-export default {};
+  export default {
+  computed: {
+    userName() {
+      return this.$store.state.user.name;
+    }
+  }    
+  }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+
+</style>
