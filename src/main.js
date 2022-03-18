@@ -22,4 +22,6 @@ requireComponent.keys().forEach((fileName) => {
   app.component(componentName, componentConfig.default || componentConfig);
 });
 
-app.use(router, store).mount("#app");
+app.use(router);
+app.use(store);
+app.mount("#app");
