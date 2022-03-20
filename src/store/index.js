@@ -7,7 +7,7 @@ export default createStore({
       name: "M.RAY",
     },
     categories: [
-      "sutainability",
+      "sustainability",
       "natural",
       "animal welfare",
       "housing",
