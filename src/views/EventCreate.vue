@@ -1,9 +1,11 @@
 <template>
   <div>
-    <h1>Create an Event, {{ userName }}</h1>
+    <h1>Create an Event, {{ user.name }}</h1>
+    <p>The is the id: {{ user.id }}</p>
     <ul>
       <li v-for="cat in categories" :key="cat">{{ cat }}</li>
     </ul>
+    <p>The total categories:</p>
   </div>
 </template>
 
