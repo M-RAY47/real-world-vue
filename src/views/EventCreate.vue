@@ -5,18 +5,19 @@
     <ul>
       <li v-for="cat in categories" :key="cat">{{ cat }}</li>
     </ul>
-    <p>The total categories are {{ localCatLength }}</p>
+    <p>The total categories are {{ catLength }}</p>
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 
 export default {
   computed: {
     localCatLength() {
       return this.$store.getters.catLength;
     },
+    ...mapGetters(["catLength"]),
     ...mapState(["user", "categories"]),
   },
 };
