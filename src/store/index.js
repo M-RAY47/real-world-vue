@@ -18,5 +18,10 @@ export default createStore({
   },
   mutations: {},
   actions: {},
+  getters: {
+    catLength(state) {
+      return state.categories.length;
+    },
+  },
   modules: {},
 });
