@@ -15,7 +15,7 @@ import { mapState } from "vuex";
 export default {
   computed: {
     localCatLength() {
-      return this.$store.categories.length;
+      return this.$store.getters.categories.catLength;
     },
     ...mapState(["user", "categories"]),
   },
