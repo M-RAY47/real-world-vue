@@ -17,7 +17,11 @@ export default createStore({
     ],
   },
   mutations: {},
-  actions: {},
+  actions: {
+    updateCount({ state, commit }) {
+      commit({ state });
+    },
+  },
   getters: {
     catLength(state) {
       return state.categories.length;
