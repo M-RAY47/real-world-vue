@@ -49,7 +49,6 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
 import Datepicker from "vuejs-datepicker";
 export default {
   components: { Datepicker },
@@ -60,11 +59,26 @@ export default {
     }
     return {
       times,
+      categories: this.$store.state.categories,
+      event: this.createFreshEvent(),
     };
   },
-  computed: {
-    ...mapGetters(["catLength"]),
-    ...mapState(["user", "categories"]),
+  methods: {
+    createFreshEvent() {
+      const user = this.$store.state.user;
+      const id = Math.floor(Math.random() * 10000000);
+      return {
+        id: id,
+        user: user,
+        category: "",
+        title: "",
+        description: "",
+        location: "",
+        date: "",
+        time: "",
+        attendees: [],
+      };
+    },
   },
 };
 </script>
