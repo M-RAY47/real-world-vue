@@ -50,9 +50,18 @@
 
 <script>
 import { mapState, mapGetters } from "vuex";
-import datepicker from "vue-datepicker";
+import Datepicker from "vuejs-datepicker";
 export default {
-  components: { datepicker },
+  components: { Datepicker },
+  data() {
+    const times = [];
+    for (let i = 1; i <= 24; i++) {
+      times.push(i + ":00");
+    }
+    return {
+      times,
+    };
+  },
   computed: {
     ...mapGetters(["catLength"]),
     ...mapState(["user", "categories"]),
@@ -60,4 +69,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.field {
+  margin-bottom: 24px;
+}
+</style>
