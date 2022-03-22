@@ -49,7 +49,8 @@
 </template>
 
 <script>
-import Datepicker from "vuejs-datepicker";
+import Datepicker from "@vuepic/vue-datepicker";
+
 export default {
   components: { Datepicker },
   data() {
