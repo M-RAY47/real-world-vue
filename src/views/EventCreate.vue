@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Create an Event</h1>
-    <form>
+    <form @submit.prevent="createEvent">
       <label>Select a category</label>
       <select v-model="event.category">
         <option v-for="cat in categories" :key="cat">{{ cat }}</option>
@@ -43,7 +43,7 @@
           <option v-for="time in times" :key="time">{{ time }}</option>
         </select>
       </div>
-      <input type="submit" class="btn btn-primary" value="submit" />
+      <input type="submit" class="button -fill-gradient" value="submit" />
     </form>
   </div>
 </template>
@@ -79,6 +79,9 @@ export default {
         time: "",
         attendees: [],
       };
+    },
+    createEvent() {
+      this.$store.dispatch("createEvent", this.event);
     },
   },
 };
