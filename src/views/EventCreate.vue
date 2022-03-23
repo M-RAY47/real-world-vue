@@ -81,7 +81,11 @@ export default {
       };
     },
     createEvent() {
-      this.$store.dispatch("createEvent", this.event);
+      this.$store.dispatch("createEvent", this.event)
+        .then(() => {
+          this.event = this.createFreshEvent();
+      }).catch(() => {console.log("There is problem, can't create an event for now try later")});
+
     },
   },
 };
