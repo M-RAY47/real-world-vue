@@ -50,6 +50,7 @@
 
 <script>
 import Datepicker from "@vuepic/vue-datepicker";
+import "@vuepic/vue-datepicker/dist/main.css";
 
 export default {
   components: { Datepicker },
@@ -72,6 +73,7 @@ export default {
         id: id,
         user: user,
         category: "",
+        organizer: user,
         title: "",
         description: "",
         location: "",
@@ -81,11 +83,20 @@ export default {
       };
     },
     createEvent() {
-      this.$store.dispatch("createEvent", this.event)
+      this.$store
+        .dispatch("createEvent", this.event)
         .then(() => {
+          this.$router.push({
+            name: "event-show",
+            params: { id: this.event.id },
+          });
           this.event = this.createFreshEvent();
-      }).catch(() => {console.log("There is problem, can't create an event for now try later")});
-
+        })
+        .catch(() => {
+          console.log(
+            "There is problem, can't create an event for now try later"
+          );
+        });
     },
   },
 };
