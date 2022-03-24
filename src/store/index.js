@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import EventService from "../services/EventService";
+import EventService from "@/services/EventService.js";
 
 export default createStore({
   state: {
@@ -7,6 +7,7 @@ export default createStore({
       id: "abcd123",
       name: "M.RAY",
     },
+    events: [],
     categories: [
       "sustainability",
       "natural",
@@ -19,13 +20,14 @@ export default createStore({
   },
   mutations: {
     ADD_EVENT(state, event) {
-      EventService.postEvent(event);
       state.events.push(event);
     },
   },
   actions: {
     createEvent({ commit }, event) {
-      commit("ADD_EVENT", event);
+      return EventService.postEvent(event).then(() => {
+        commit("ADD_EVENT", event);
+      });
     },
   },
   getters: {
