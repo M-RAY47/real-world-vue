@@ -52,11 +52,51 @@
         "name": "M.RAY"
       },
       "category": "animal welfare",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
       "title": "I is it working?",
       "description": "",
       "location": "",
-      "date": "",
+      "date": "2022-03-23T23:02:00.000Z",
       "time": "11:00",
+      "attendees": []
+    },
+    {
+      "id": 4687547,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "natural",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Plante some beans",
+      "description": "We going to plant some beans",
+      "location": "Shanghai",
+      "date": "2022-03-23T23:04:00.000Z",
+      "time": "15:00",
+      "attendees": []
+    },
+    {
+      "id": 4424293,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Learn vue3",
+      "description": "We are going to learn some vuex",
+      "location": "Shanghai",
+      "date": "2022-03-23T16:06:00.000Z",
+      "time": "24:00",
       "attendees": []
     }
   ]
