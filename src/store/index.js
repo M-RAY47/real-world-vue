@@ -35,7 +35,6 @@ export default createStore({
     fetchEvents({ commit }) {
       return EventService.getEvents()
         .then((res) => {
-          console.log(res.data);
           commit("SET_EVENTS", res.data);
         })
         .catch((err) => {
