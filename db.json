@@ -140,6 +140,24 @@
       "date": "2022-03-24T15:39:00.000Z",
       "time": "23:00",
       "attendees": []
+    },
+    {
+      "id": 313828,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Learn Vuex",
+      "description": "We gonna learn some Vuex",
+      "location": "Shanghai",
+      "date": "",
+      "time": "24:00",
+      "attendees": []
     }
   ]
 }
