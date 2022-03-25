@@ -7,7 +7,10 @@
         "name": "Adam"
       },
       "category": "animal welfare",
-      "organizer": "Adam",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
       "title": "Cat Cabaret",
       "description": "Yay felines!",
       "location": "Meow Town",
@@ -22,7 +25,10 @@
         "name": "Adam"
       },
       "category": "animal welfare",
-      "organizer": "Adam",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
       "title": "Kitty Cluster",
       "description": "Yay cats!",
       "location": "Catlandia",
@@ -97,6 +103,42 @@
       "location": "Shanghai",
       "date": "2022-03-23T16:06:00.000Z",
       "time": "24:00",
+      "attendees": []
+    },
+    {
+      "id": 2762781,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Learn Node js",
+      "description": "We are going to learn Nodejs for microservices",
+      "location": "Shanghai",
+      "date": "2022-03-24T15:26:00.000Z",
+      "time": "23:00",
+      "attendees": []
+    },
+    {
+      "id": 3326058,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Cook Pizza",
+      "description": "We will cook some delicious pizza",
+      "location": "Home",
+      "date": "2022-03-24T15:39:00.000Z",
+      "time": "23:00",
       "attendees": []
     }
   ]
