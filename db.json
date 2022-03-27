@@ -266,6 +266,24 @@
       "date": "2022-03-27T14:53:00.000Z",
       "time": "22:00",
       "attendees": []
+    },
+    {
+      "id": 2632779,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Reading",
+      "description": "Read some clean code",
+      "location": "Indoor",
+      "date": "2022-03-27T14:56:00.000Z",
+      "time": "23:00",
+      "attendees": []
     }
   ]
 }
