@@ -212,6 +212,60 @@
       "date": "2022-03-27T14:30:00.000Z",
       "time": "22:00",
       "attendees": []
+    },
+    {
+      "id": 3895591,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Hunting",
+      "description": "We are gonna go hunt some rabbits",
+      "location": "Shanghai",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 8737045,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Helping people",
+      "description": "We gonna help people to get some vegetables",
+      "location": "Shanghai",
+      "date": "2022-03-27T14:52:00.000Z",
+      "time": "22:00",
+      "attendees": []
+    },
+    {
+      "id": 6441018,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Reading",
+      "description": "Read some Pragmantic Programmer",
+      "location": "Indoor",
+      "date": "2022-03-27T14:53:00.000Z",
+      "time": "22:00",
+      "attendees": []
     }
   ]
 }
