@@ -323,7 +323,28 @@
       "location": "Indoor",
       "date": "2022-03-27T15:00:00.000Z",
       "time": "6:00",
-      "attendees": ["M.RAY", "Barry"]
+      "attendees": [
+        "M.RAY",
+        "Barry"
+      ]
+    },
+    {
+      "id": 2884886,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Learn Nuxt",
+      "description": "We gonna learn Nuxt js",
+      "location": "Shanghai",
+      "date": "2022-03-28T16:07:00.000Z",
+      "time": "6:00",
+      "attendees": []
     }
   ]
 }
