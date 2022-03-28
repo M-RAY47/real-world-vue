@@ -32,8 +32,8 @@ export default createStore({
         commit("ADD_EVENT", event);
       });
     },
-    fetchEvents({ commit }) {
-      return EventService.getEvents()
+    fetchEvents({ commit }, { perPage, page }) {
+      return EventService.getEvents(perPage, page)
         .then((res) => {
           commit("SET_EVENTS", res.data);
         })
