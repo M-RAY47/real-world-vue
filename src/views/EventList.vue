@@ -8,6 +8,7 @@
         rel="prev"
         >Prev Page</router-link
       >
+      |
     </template>
     <router-link
       :to="{ name: 'event-list', query: { page: page + 1 } }"
