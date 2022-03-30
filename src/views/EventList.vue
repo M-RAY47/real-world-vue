@@ -10,7 +10,7 @@
       >
       <template v-if="">|</template>
     </template>
-    <template v-if="page * 3 < totalEvents">
+    <template v-if="totalPage < totalEvents">
       <router-link
         :to="{ name: 'event-list', query: { page: page + 1 } }"
         rel="next"
