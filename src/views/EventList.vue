@@ -8,7 +8,7 @@
         rel="prev"
         >Prev Page</router-link
       >
-      <template v-if="">|</template>
+      <template v-if="totalPage < totalEvents">|</template>
     </template>
     <template v-if="totalPage < totalEvents">
       <router-link
