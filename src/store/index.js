@@ -7,6 +7,7 @@ export default createStore({
       id: "abcd123",
       name: "M.RAY",
     },
+    event: [],
     events: [],
     categories: [
       "sustainability",
