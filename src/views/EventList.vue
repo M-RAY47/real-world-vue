@@ -37,7 +37,7 @@ export default {
     page() {
       return parseInt(this.$route.query.page) || 1;
     },
-    totalPage = () => this.page() * this.perPage,
+    totalPage: () => this.page() * this.perPage,
     ...mapState(["events", "totalEvents"]),
   },
 };
