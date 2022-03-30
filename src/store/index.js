@@ -32,7 +32,7 @@ export default createStore({
     },
     SET_EVENT(state, event) {
       state.event = event;
-    }
+    },
   },
   actions: {
     createEvent({ commit }, event) {
