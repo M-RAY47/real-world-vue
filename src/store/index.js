@@ -7,7 +7,7 @@ export default createStore({
       id: "abcd123",
       name: "M.RAY",
     },
-    event: [],
+    event: {},
     events: [],
     categories: [
       "sustainability",
@@ -30,6 +30,9 @@ export default createStore({
     SET_TOTAL_EVENTS(state, total) {
       state.totalEvents = total;
     },
+    SET_EVENT(state, event) {
+      state.event = event;
+    }
   },
   actions: {
     createEvent({ commit }, event) {
