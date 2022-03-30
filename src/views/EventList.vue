@@ -8,7 +8,7 @@
         rel="prev"
         >Prev Page</router-link
       >
-      |
+      <template v-if="">|</template>
     </template>
     <template v-if="page * 3 < totalEvents">
       <router-link
@@ -37,6 +37,7 @@ export default {
     page() {
       return parseInt(this.$route.query.page) || 1;
     },
+    totalPage = () => this.page() * this.perPage,
     ...mapState(["events", "totalEvents"]),
   },
 };
