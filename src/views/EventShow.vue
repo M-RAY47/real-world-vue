@@ -30,7 +30,7 @@
   </div>
 </template>
 <script>
-import EventService from "@/services/EventService.js";
+import { mapState } from "vuex";
 
 export default {
   props: {
@@ -39,20 +39,7 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      event: [],
-    };
-  },
-  created() {
-    EventService.getEvent(this.id)
-      .then((res) => {
-        this.event = res.data;
-      })
-      .catch((err) => {
-        console.log("This is the err:" + err.message);
-      });
-  },
+  computed: mapState(["event"]),
 };
 </script>
 
