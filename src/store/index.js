@@ -51,7 +51,7 @@ export default createStore({
           console.log("This is the error:" + err.message);
         });
     },
-    fetchEvent({ commit }, id)
+    fetchEvent({ commit }, id){
       EventService.getEvent(id)
       .then((res) => {
         commit("SET_EVENT", res.data);
