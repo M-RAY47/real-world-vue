@@ -51,10 +51,10 @@ export default createStore({
           console.log("This is the error:" + err.message);
         });
     },
-    
-      EventService.getEvent(this.id)
+    getEvent({ commit }, id)
+      EventService.getEvent(id)
       .then((res) => {
-        this.event = res.data;
+        commit("SET_EVENT", res.data);
       })
       .catch((err) => {
         console.log("This is the err:" + err.message);
