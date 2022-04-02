@@ -68,8 +68,8 @@ export default createStore({
   },
   getters: {
     getEventById: (state) => (id) => {
-      return state.events.fing((event) => event.id === id);
-    }
+      return state.events.find((event) => event.id === id);
+    },
   },
   modules: {},
 });
