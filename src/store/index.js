@@ -51,20 +51,25 @@ export default createStore({
           console.log("This is the error:" + err.message);
         });
     },
-    fetchEvent({ commit }, id) {
-      EventService.getEvent(id)
-        .then((res) => {
-          commit("SET_EVENT", res.data);
-        })
-        .catch((err) => {
-          console.log("This is the err:" + err.message);
-        });
+    fetchEvent({ commit, getters }, id) {
+      let findEvent = getters(id);
+      if (findEvent) {
+        commit("SET_EVENT", findEvent);
+      } else {
+        EventService.getEvent(id)
+          .then((res) => {
+            commit("SET_EVENT", res.data);
+          })
+          .catch((err) => {
+            console.log("This is the err:" + err.message);
+          });
+      }
     },
   },
   getters: {
-    catLength(state) {
-      return state.categories.length;
-    },
+    getEventById: state => id => {
+      return state.events.fing(event => event.id === id)
+    }
   },
   modules: {},
 });
