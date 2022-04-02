@@ -52,7 +52,7 @@ export default createStore({
         });
     },
     fetchEvent({ commit, getters }, id) {
-      let findEvent = getters(id);
+      let findEvent = getters.getEventById(id);
       if (findEvent) {
         commit("SET_EVENT", findEvent);
       } else {
