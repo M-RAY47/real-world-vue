@@ -39,6 +39,9 @@ export default {
       required: true,
     },
   },
+  created() {
+    this.$store.dispatch("fetchEvent", this.id);
+  },
   computed: mapState(["event"]),
 };
 </script>
