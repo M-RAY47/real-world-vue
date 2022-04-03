@@ -381,6 +381,24 @@
       "date": "2022-04-03T14:44:00.000Z",
       "time": "24:00",
       "attendees": []
+    },
+    {
+      "id": 7283852,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Dog Walk",
+      "description": "Walking dogs",
+      "location": "Shanghai",
+      "date": "2022-04-03T14:53:00.000Z",
+      "time": "15:00",
+      "attendees": []
     }
   ]
 }
