@@ -45,6 +45,7 @@ export default createStore({
         .then((res) => {
           const total = res.headers["x-total-count"];
           commit("SET_TOTAL_EVENTS", total);
+          console.log("this is the data:", res.data);
           commit("SET_EVENTS", res.data);
         })
         .catch((err) => {
@@ -52,11 +53,11 @@ export default createStore({
         });
     },
     fetchEvent({ commit, getters }, id) {
-      let findEvent = getters.getEventById(id);
-      if (findEvent) {
-        commit("SET_EVENT", findEvent);
+      let event = getters.getEventByIds(id);
+      if (event) {
+        commit("SET_EVENT", event);
       } else {
-        EventService.getEvent(id)
+        return EventService.getEvent(id)
           .then((res) => {
             commit("SET_EVENT", res.data);
           })
@@ -67,8 +68,12 @@ export default createStore({
     },
   },
   getters: {
-    getEventById: (state) => (id) => {
-      return state.events.find((event) => event.id === id);
+    getEventByIds: (state) => (id) => {
+      console.log("this is the events", state.events);
+      return state.events.find((event) => {
+        event.id === id;
+        console.log(event.id);
+      });
     },
   },
   modules: {},
