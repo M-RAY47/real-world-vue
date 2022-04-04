@@ -71,7 +71,7 @@ export default createStore({
       console.log("this is the events", state.events);
       return state.events.find((event) => {
         event.id === id;
-        console.log(event)
+        console.log(event);
         console.log(event.id);
       });
     },
