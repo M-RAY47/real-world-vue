@@ -45,7 +45,6 @@ export default createStore({
         .then((res) => {
           const total = res.headers["x-total-count"];
           commit("SET_TOTAL_EVENTS", total);
-          console.log("this is the data:", res.data);
           commit("SET_EVENTS", res.data);
         })
         .catch((err) => {
@@ -72,6 +71,7 @@ export default createStore({
       console.log("this is the events", state.events);
       return state.events.find((event) => {
         event.id === id;
+        console.log(event)
         console.log(event.id);
       });
     },
