@@ -53,10 +53,10 @@ export default createStore({
     },
     fetchEvent({ commit, getters, state }, id) {
       if (id == state.event.id) {
-        return this.state.event;
+        return state.event;
       }
 
-      let event = getters.getEventByIds(id);
+      var event = getters.getEventByIds(id);
       if (event) {
         commit("SET_EVENT", event);
       } else {
