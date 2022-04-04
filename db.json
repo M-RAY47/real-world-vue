@@ -399,6 +399,24 @@
       "date": "2022-04-03T14:53:00.000Z",
       "time": "15:00",
       "attendees": []
+    },
+    {
+      "id": 2122115,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Corona Virus test",
+      "description": "Tomorrow morning will have test",
+      "location": "Shanghai",
+      "date": "2022-04-04T16:44:00.000Z",
+      "time": "6:00",
+      "attendees": []
     }
   ]
 }
