@@ -435,6 +435,24 @@
       "date": "2022-04-04T17:43:00.000Z",
       "time": "15:00",
       "attendees": []
+    },
+    {
+      "id": 5739513,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Authentification",
+      "description": "Gonna do some auth",
+      "location": "",
+      "date": "2022-04-06T14:51:00.000Z",
+      "time": "9:00",
+      "attendees": []
     }
   ]
 }
