@@ -1,12 +1,12 @@
 import { createStore } from "vuex";
 import EventService from "@/services/EventService.js";
+import * as user from "@stort/modules/user.js"
 
 export default createStore({
+  modules: {
+    user,
+  },
   state: {
-    user: {
-      id: "abcd123",
-      name: "M.RAY",
-    },
     event: {},
     events: [],
     categories: [
