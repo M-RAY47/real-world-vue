@@ -3,4 +3,4 @@ export const state = {
     id: "abcd123",
     name: "M.RAY",
   },
-},
+};
