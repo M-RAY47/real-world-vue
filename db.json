@@ -453,6 +453,24 @@
       "date": "2022-04-06T14:51:00.000Z",
       "time": "9:00",
       "attendees": []
+    },
+    {
+      "id": 9464945,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Cook Potatoes",
+      "description": "Gonna cook some potatoes",
+      "location": "Shanghai",
+      "date": "2022-04-08T15:13:00.000Z",
+      "time": "10:00",
+      "attendees": []
     }
   ]
 }
