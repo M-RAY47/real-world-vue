@@ -3,15 +3,6 @@ import EventService from "@/services/EventService.js";
 export const state = {
   event: {},
   events: [],
-  categories: [
-    "sustainability",
-    "natural",
-    "animal welfare",
-    "housing",
-    "eduction",
-    "food",
-    "community",
-  ],
   totalEvents: null,
 };
 
