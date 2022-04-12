@@ -489,6 +489,24 @@
       "date": "2022-04-12T10:24:00.000Z",
       "time": "15:00",
       "attendees": []
+    },
+    {
+      "id": 5073910,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Corona Swap",
+      "description": "Swap morning and evening",
+      "location": "Shanghai",
+      "date": "2022-04-12T10:43:00.000Z",
+      "time": "20:00",
+      "attendees": []
     }
   ]
 }
