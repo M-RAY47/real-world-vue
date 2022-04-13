@@ -507,6 +507,24 @@
       "date": "2022-04-12T10:43:00.000Z",
       "time": "20:00",
       "attendees": []
+    },
+    {
+      "id": 8112426,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Study",
+      "description": "Learning some new things",
+      "location": "Shanghai",
+      "date": "2022-04-13T16:53:00.000Z",
+      "time": "15:00",
+      "attendees": []
     }
   ]
 }
