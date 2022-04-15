@@ -1,22 +1,33 @@
 <template>
-  <div class="notification-bar">
-    <p>{{ notifiction.message }}</p>
+  <div class="notification-container">
+    <NotificationBar
+      v-for="notification in notifications"
+      :key="notification.id"
+      :notification="notification"
+    />
   </div>
 </template>
 
 <script>
+import NotificationBar from "@/components/NotificationBar.vue";
+import { mapState } from "vuex";
+
 export default {
-  props: {
-    notifiction: {
-      type: Object,
-      required: true,
-    },
+  components: {
+    NotificationBar,
+  },
+  computed: mapState("notifications", ["notifications"]),
+  setup() {
+    return {};
   },
 };
 </script>
 
-<style lang="scss" scoped>
-.notifiction-bar {
-  margin: 1em 0 1em;
+<style scoped>
+.notification-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-right: 40px;
 }
 </style>
