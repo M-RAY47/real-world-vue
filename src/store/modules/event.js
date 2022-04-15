@@ -71,12 +71,12 @@ export const actions = {
         })
         .catch((err) => {
           const notification = {
-          type: "error",
-          message: "There was a problem fetching event: " + err.message,
-        };
-        dispatch("notifications/add", notification, {root: true});
+            type: "error",
+            message: "There was a problem fetching event: " + err.message,
+          };
+          dispatch("notifications/add", notification, { root: true });
           console.log("This is the error:" + err.message);
-      });
+        });
     }
   },
 };
