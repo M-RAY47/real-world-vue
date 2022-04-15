@@ -22,9 +22,14 @@ export const mutations = {
 };
 
 export const actions = {
-  createEvent({ commit }, event) {
+  createEvent({ commit, dispatch }, event) {
     return EventService.postEvent(event).then(() => {
       commit("ADD_EVENT", event);
+      const notification = {
+        type: "success",
+        message: "Your event was successfully created"! 
+      }
+      dispatch("notifictions/add", notification, {root: true});
     });
   },
   fetchEvents({ commit, dispatch }, { perPage, page }) {
