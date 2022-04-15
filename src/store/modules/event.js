@@ -38,6 +38,7 @@ export const actions = {
           message: "There is problem creating event" + err.message,
         };
         dispatch("notifictions/add", notification, { root: true });
+        throw err;
       });
   },
   fetchEvents({ commit, dispatch }, { perPage, page }) {
