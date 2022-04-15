@@ -27,7 +27,7 @@ export const actions = {
       commit("ADD_EVENT", event);
     });
   },
-  fetchEvents({ commit }, { perPage, page }) {
+  fetchEvents({ commit, dispatch }, { perPage, page }) {
     return EventService.getEvents(perPage, page)
       .then((res) => {
         const total = parseInt(res.headers["x-total-count"]);
@@ -37,10 +37,10 @@ export const actions = {
       .catch((err) => {
         const notification = {
           type: "error",
-          message: "There was a problem fetching events: " err.message
-        }
-        dispatch("notifications/add", notification);
-        console.log("This is the error:" + err.message);
+          message: "There was a problem fetching events: " + err.message,
+        },
+        dispatch ("notifications/add", notification, {root: true});
+          console.log("This is the error:" + err.message);
       });
   },
   fetchEvent({ commit, getters, state }, id) {
