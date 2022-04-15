@@ -37,7 +37,7 @@ export const actions = {
           type: "error",
           message: "There is problem creating event" + err.message 
         };
-        dispatch("notifictions/add", notification, {root: true});
+        dispatch("notifictions/add", notification, { root: true });
       });
   },
   fetchEvents({ commit, dispatch }, { perPage, page }) {
@@ -52,8 +52,8 @@ export const actions = {
           type: "error",
           message: "There was a problem fetching events: " + err.message,
         };
-        dispatch ("notifications/add", notification, {root: true});
-          console.log("This is the error:" + err.message);
+        dispatch("notifications/add", notification, { root: true });
+        console.log("This is the error:" + err.message);
       });
   },
   fetchEvent({ commit, getters, dispatch, state }, id) {
@@ -70,7 +70,7 @@ export const actions = {
           commit("SET_EVENT", res.data);
         })
         .catch((err) => {
-        const notification = {
+          const notification = {
           type: "error",
           message: "There was a problem fetching event: " + err.message,
         };
