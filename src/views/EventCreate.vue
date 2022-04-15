@@ -92,11 +92,7 @@ export default {
           });
           this.event = this.createFreshEvent();
         })
-        .catch(() => {
-          console.log(
-            "There is problem, can't create an event for now try later"
-          );
-        });
+        .catch(() => {});
     },
   },
 };
