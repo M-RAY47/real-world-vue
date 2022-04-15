@@ -30,14 +30,14 @@ export const actions = {
           type: "success",
           message: "Your event was successfully created!",
         };
-        dispatch("notifictions/add", notification, { root: true });
+        dispatch("notifications/add", notification, { root: true });
       })
       .catch((err) => {
         const notification = {
           type: "error",
           message: "There is problem creating event" + err.message,
         };
-        dispatch("notifictions/add", notification, { root: true });
+        dispatch("notifications/add", notification, { root: true });
         throw err;
       });
   },
@@ -54,7 +54,6 @@ export const actions = {
           message: "There was a problem fetching events: " + err.message,
         };
         dispatch("notifications/add", notification, { root: true });
-        console.log("This is the error:" + err.message);
       });
   },
   fetchEvent({ commit, getters, dispatch, state }, id) {
