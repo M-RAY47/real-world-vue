@@ -43,7 +43,7 @@ export const actions = {
           console.log("This is the error:" + err.message);
       });
   },
-  fetchEvent({ commit, getters, state }, id) {
+  fetchEvent({ commit, getters, dispatch, state }, id) {
     if (id == state.event.id) {
       return state.event;
     }
@@ -57,8 +57,13 @@ export const actions = {
           commit("SET_EVENT", res.data);
         })
         .catch((err) => {
-          console.log("This is the err:" + err.message);
-        });
+        const notification = {
+          type: "error",
+          message: "There was a problem fetching event: " + err.message,
+        },
+        dispatch ("notifications/add", notification, {root: true});
+          console.log("This is the error:" + err.message);
+      });
     }
   },
 };
