@@ -13,14 +13,15 @@
 </template>
 
 <script>
+import { formFieldMixin } from "@/mixins/formFieldMixin";
 export default {
   mixins: [formFieldMixin],
   props: {
     options: {
       type: Array,
       required: true,
-    }
-  }
+    },
+  },
 };
 </script>
 
