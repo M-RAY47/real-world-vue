@@ -13,10 +13,16 @@
 <script setup>
 import { computed } from "@vue/runtime-core";
 import { formFieldMixin } from '../mixin/formFieldMixin';
+mixins: [formFieldMixin];
+
 const listeners = computed(() => {
   return {
     ...this.$listeners,
     input: this.updateValue,
+  };
+
+  return {
+    listeners,
   };
 });
 </script>
