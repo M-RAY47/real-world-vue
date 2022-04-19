@@ -12,7 +12,7 @@
 
 <script setup>
 import { computed } from "@vue/runtime-core";
-import { formFieldMixin } from '../mixin/formFieldMixin';
+import { formFieldMixin } from "../mixin/formFieldMixin";
 mixins: [formFieldMixin];
 
 const listeners = computed(() => {
@@ -20,7 +20,6 @@ const listeners = computed(() => {
     ...this.$listeners,
     input: this.updateValue,
   };
-
 });
 return {
   listeners,
