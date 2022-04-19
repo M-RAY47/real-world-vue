@@ -542,7 +542,7 @@
       "location": "Shanghai",
       "date": "2022-04-15T17:22:00.000Z",
       "time": "14:00",
-      "attendees": []
+      "attendees": ["M.RAY", "Barry", "M.Sani", "Bichara"]
     }
   ]
 }
