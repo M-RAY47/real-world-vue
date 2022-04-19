@@ -21,10 +21,10 @@ const listeners = computed(() => {
     input: this.updateValue,
   };
 
-  return {
-    listeners,
-  };
 });
+return {
+  listeners,
+};
 </script>
 
 <style lang="scss" scoped></style>
