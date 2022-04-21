@@ -31,6 +31,7 @@
 </template>
 <script>
 import { mapState } from "vuex";
+import NProgress from "nprogress";
 
 export default {
   props: {
@@ -39,6 +40,13 @@ export default {
       required: true,
     },
   },
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    NProgress.start();
+    store.dispatch("event/fetchEvent", routeTo.params.id).then(()=>{
+      NProgress.done();
+      next();
+    });
+  }
   created() {
     this.$store.dispatch("fetchEvent", this.id);
   },
