@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import EventCreate from "../views/EventCreate.vue";
 import EventList from "../views/EventList.vue";
 import EventShow from "../views/EventShow.vue";
+import NProgress from "nprogress";
 
 const routes = [
   {
@@ -27,5 +28,10 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+
+router.beforeEach((routeTo, routeFrom, next) => {
+  NProgress.start();
+  next();
+})
 
 export default router;
