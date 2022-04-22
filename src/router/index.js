@@ -32,6 +32,6 @@ const router = createRouter({
 router.beforeEach((routeTo, routeFrom, next) => {
   NProgress.start();
   next();
-})
+});
 
 export default router;
