@@ -48,9 +48,6 @@ export default {
       next();
     });
   },
-  created() {
-    this.$store.dispatch("fetchEvent", this.id);
-  },
   computed: mapState({
     event: (state) => state.event.event,
   }),
