@@ -34,4 +34,9 @@ router.beforeEach((routeTo, routeFrom, next) => {
   next();
 });
 
+router.afterEach((routeTo, routeFrom, next) => {
+  NProgress.done();
+  next();
+})
+
 export default router;
