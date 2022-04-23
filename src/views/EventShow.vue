@@ -41,13 +41,6 @@ export default {
       required: true,
     },
   },
-  beforeRouteEnter(routeTo, routeFrom, next) {
-    NProgress.start();
-    store.dispatch("event/fetchEvent", routeTo.params.id).then(() => {
-      NProgress.done();
-      next();
-    });
-  },
   computed: mapState({
     event: (state) => state.event.event,
   }),
