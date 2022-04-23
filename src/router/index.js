@@ -19,9 +19,9 @@ const routes = [
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
       store.dispatch("event/fetchEvent", routeTo.params.id).then(() => {
-        next()
-      })
-    }
+        next();
+      });
+    },
   },
   {
     path: "/event/create",
