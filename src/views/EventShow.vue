@@ -30,20 +30,13 @@
   </div>
 </template>
 <script>
-import { mapState } from "vuex";
-import NProgress from "nprogress";
-import store from "@/store";
-
 export default {
   props: {
-    id: {
-      type: String,
+    event: {
+      type: Object,
       required: true,
     },
   },
-  computed: mapState({
-    event: (state) => state.event.event,
-  }),
 };
 </script>
 
