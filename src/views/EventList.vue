@@ -39,18 +39,18 @@ export default {
   components: {
     EventCard,
   },
-  created() {
-    this.$store.dispatch("fetchEvents", {
-      perPage: this.perPage,
-      page: this.page,
-    });
+  beforeRouteEnter(to, from, next) {
+    getPageEvents(to, next);
+  },
+  beforeRouteUpdate(to, from, next) {
+    getPageEvents(to, next);
   },
   computed: {
     page() {
       return parseInt(this.$route.query.page) || 1;
     },
     hasNextPage() {
-      return this.event.totalEvents > this.page * this.perPage;
+      return this.event.totalEvents > this.page * this.event.perPage;
     },
     ...mapState(["event", "user"]),
   },
