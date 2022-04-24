@@ -28,7 +28,10 @@ function getPageEvents(routeTo, next) {
   const currenPage = parseInt(routeTo.query.page) || 1;
   store.dispatch("event/fetchEvents", {
     page: currenPage,
-  })
+  }).then(() => {
+    routeTo.params.page = currenPage;
+    next();
+  });
 }
 
 
