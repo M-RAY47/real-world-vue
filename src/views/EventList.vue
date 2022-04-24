@@ -23,12 +23,20 @@
 <script>
 import EventCard from "@/components/EventCard.vue";
 import { mapState } from "vuex";
+import store from "@/store";
+function getPageEvents(routeTo, next) {
+  const currenPage = parseInt(routeTo.query.page) || 1;
+  store.dispatch("event/fetchEvents", {
+    page: currenPage,
+  })
+}
+
+
 export default {
   components: {
     EventCard,
   },
   created() {
-    this.perPage = 3;
     this.$store.dispatch("fetchEvents", {
       perPage: this.perPage,
       page: this.page,
