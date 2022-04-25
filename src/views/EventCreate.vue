@@ -51,6 +51,7 @@
 <script>
 import Datepicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
+import NProgress from "npro gress"
 
 export default {
   components: { Datepicker },
@@ -83,6 +84,7 @@ export default {
       };
     },
     createEvent() {
+      NProgress.start()
       this.$store
         .dispatch("createEvent", this.event)
         .then(() => {
@@ -92,7 +94,9 @@ export default {
           });
           this.event = this.createFreshEvent();
         })
-        .catch(() => {});
+        .catch(() => {
+          NProgress.done()
+        });
     },
   },
 };
