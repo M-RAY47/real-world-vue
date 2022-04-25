@@ -24,19 +24,25 @@
 import EventCard from "@/components/EventCard.vue";
 import { mapState } from "vuex";
 import store from "@/store";
-function getPageEvents(routeTo, next) {
-  const currenPage = parseInt(routeTo.query.page) || 1;
+function getPageEvents(to, next) {
+  const currenPage = parseInt(to.query.page) || 1;
   store
     .dispatch("event/fetchEvents", {
       page: currenPage,
     })
     .then(() => {
-      routeTo.params.page = currenPage;
+      to.params.page = currenPage;
       next();
     });
 }
 
 export default {
+  props: {
+    page: {
+      type: Number,
+      required: true,
+    },
+  },
   components: {
     EventCard,
   },
