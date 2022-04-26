@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import EventCreate from "../views/EventCreate.vue";
 import EventList from "../views/EventList.vue";
 import EventShow from "../views/EventShow.vue";
+import NotFound from "../views/NotFound.vue";
 import NProgress from "nprogress";
 import store from "@/store";
 
@@ -28,6 +29,11 @@ const routes = [
     path: "/event/create",
     name: "event-create",
     component: EventCreate,
+  },
+  {
+    path: "/notfound",
+    name: "not-founs",
+    component: NotFound,
   },
 ];
 
