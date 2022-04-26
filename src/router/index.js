@@ -31,10 +31,14 @@ const routes = [
     component: EventCreate,
   },
   {
-    path: "/notfound",
-    name: "not-founs",
+    path: "/404",
+    name: "404",
     component: NotFound,
   },
+  {
+    path: "*",
+    redirect: {name: "404"}
+  }
 ];
 
 const router = createRouter({
