@@ -19,10 +19,21 @@ const routes = [
     component: EventShow,
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
-      store.dispatch("event/fetchEvent", routeTo.params.id).then((event) => {
-        routeTo.params.event = event;
-        next();
-      });
+      store
+        .dispatch("event/fetchEvent", routeTo.params.id)
+        .then((event) => {
+          routeTo.params.event = event;
+          next();
+        })
+        .catch((err) => {
+          next({ name: "404", params: { resource: "page" } });
+          // const notification = {
+          //   type: "error",
+          //   message: "There was a problem fetching event: " + err.message,
+          // };
+          // dispatch("notifications/add", notification, { root: true });
+          // console.log("This is the error:" + err.message);
+        });
     },
   },
   {
@@ -34,10 +45,11 @@ const routes = [
     path: "/404",
     name: "404",
     component: NotFound,
+    props: true,
   },
   {
     path: "*",
-    redirect: {name: "404"}
+    redirect: { name: "404", params: { resource: "event" } },
   }
 ];
 
