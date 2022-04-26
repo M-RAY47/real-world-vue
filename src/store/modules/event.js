@@ -57,7 +57,7 @@ export const actions = {
         dispatch("notifications/add", notification, { root: true });
       });
   },
-  fetchEvent({ commit, getters, dispatch, state }, id) {
+  fetchEvent({ commit, getters, state }, id) {
     if (id == state.event.id) {
       return state.event;
     }
@@ -67,19 +67,10 @@ export const actions = {
       commit("SET_EVENT", event);
       return event;
     } else {
-      return EventService.getEvent(id)
-        .then((res) => {
-          commit("SET_EVENT", res.data);
-          return res.data;
-        })
-        .catch((err) => {
-          const notification = {
-            type: "error",
-            message: "There was a problem fetching event: " + err.message,
-          };
-          dispatch("notifications/add", notification, { root: true });
-          console.log("This is the error:" + err.message);
-        });
+      return EventService.getEvent(id).then((res) => {
+        commit("SET_EVENT", res.data);
+        return res.data;
+      });
     }
   },
 };
