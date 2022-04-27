@@ -26,6 +26,7 @@ const routes = [
           next();
         })
         .catch((err) => {
+          console.log(err);
           next({ name: "404", params: { resource: "page" } });
           // const notification = {
           //   type: "error",
@@ -47,10 +48,10 @@ const routes = [
     component: NotFound,
     props: true,
   },
-  {
-    path: "*",
-    redirect: { name: "404", params: { resource: "event" } },
-  }
+  // {
+  //   path: "*",
+  //   redirect: { name: "404", params: { resource: "event" } },
+  // },
 ];
 
 const router = createRouter({
