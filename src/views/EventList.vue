@@ -53,7 +53,7 @@ export default {
     getPageEvents(to, next);
   },
   computed: {
-    page() {
+    pageFunc() {
       return parseInt(this.$route.query.page) || 1;
     },
     hasNextPage() {

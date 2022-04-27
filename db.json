@@ -542,7 +542,30 @@
       "location": "Shanghai",
       "date": "2022-04-15T17:22:00.000Z",
       "time": "14:00",
-      "attendees": ["M.RAY", "Barry", "M.Sani", "Bichara"]
+      "attendees": [
+        "M.RAY",
+        "Barry",
+        "M.Sani",
+        "Bichara"
+      ]
+    },
+    {
+      "id": 4617079,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "natural",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Eat Vegetables",
+      "description": "Will eat healthy vegetables",
+      "location": "Shanghai",
+      "date": "",
+      "time": "10:00",
+      "attendees": []
     }
   ]
 }
