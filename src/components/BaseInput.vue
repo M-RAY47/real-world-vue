@@ -12,8 +12,8 @@
 
 <script setup>
 import { computed } from "@vue/runtime-core";
-import { formFieldMixin } from "../mixin/formFieldMixin";
-mixins: [formFieldMixin];
+// import { formFieldMixin } from "../mixin/formFieldMixin";
+// mixins: [formFieldMixin];
 
 const listeners = computed(() => {
   return {
@@ -21,9 +21,6 @@ const listeners = computed(() => {
     input: this.updateValue,
   };
 });
-return {
-  listeners,
-};
 </script>
 
 <style lang="scss" scoped></style>
