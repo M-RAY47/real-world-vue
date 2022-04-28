@@ -1,9 +1,9 @@
 <template>
   <div>
     <h1>Oop!</h1>
-    <h2>{{ message }}</h2>
-    <route-link :to="{ name: 'event-list' }"
-      >Back to the list of events</route-link
+    <h2 class="message">{{ message }}</h2>
+    <router-link :to="{ name: 'event-list' }"
+      >Back to the list of events</router-link
     >
   </div>
 </template>
@@ -18,4 +18,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.message {
+  color: #000;
+}
+</style>
