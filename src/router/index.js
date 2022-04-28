@@ -48,10 +48,10 @@ const routes = [
     component: NotFound,
     props: true,
   },
-  // {
-  //   path: "*",
-  //   redirect: { name: "404", params: { resource: "event" } },
-  // },
+  {
+    path: "/:paathMatch(.*)*",
+    redirect: { name: "404", params: { resource: "event" } },
+  },
 ];
 
 const router = createRouter({
