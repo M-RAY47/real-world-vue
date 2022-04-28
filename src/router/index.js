@@ -59,7 +59,7 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((routeTo, routeFrom, next) => {
+router.beforeEach((to, from, next) => {
   NProgress.start();
   next();
 });
