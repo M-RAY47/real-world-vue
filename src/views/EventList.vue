@@ -53,9 +53,6 @@ export default {
     getPageEvents(to, next);
   },
   computed: {
-    pageFunc() {
-      return parseInt(this.$route.query.page) || 1;
-    },
     hasNextPage() {
       return this.event.totalEvents > this.page * this.event.perPage;
     },
