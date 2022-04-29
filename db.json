@@ -584,6 +584,24 @@
       "date": "",
       "time": "11:00",
       "attendees": []
+    },
+    {
+      "id": 1157337,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Learning How to learn",
+      "description": "Revise learning how to learn course",
+      "location": "Shanghai",
+      "date": "",
+      "time": "10:00",
+      "attendees": []
     }
   ]
 }
