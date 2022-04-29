@@ -566,6 +566,24 @@
       "date": "",
       "time": "10:00",
       "attendees": []
+    },
+    {
+      "id": 6209364,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Coding Vuex",
+      "description": "I just debugged a vuex code",
+      "location": "Shanghai",
+      "date": "",
+      "time": "11:00",
+      "attendees": []
     }
   ]
 }
