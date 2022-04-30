@@ -56,6 +56,7 @@ h6 {
   display: flex;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+  color: #000;
 }
 h1 {
   font-size: 50px;
