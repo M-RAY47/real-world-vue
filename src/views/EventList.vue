@@ -27,7 +27,7 @@ import store from "@/store";
 function getPageEvents(to, next) {
   const currenPage = parseInt(to.query.page) || 1;
   store
-    .dispatch("event/fetchEvents", {
+    .dispatch("fetchEvents", {
       page: currenPage,
     })
     .then(() => {
