@@ -601,7 +601,27 @@
       "location": "Shanghai",
       "date": "",
       "time": "10:00",
-      "attendees": ["M.RAY"]
+      "attendees": [
+        "M.RAY"
+      ]
+    },
+    {
+      "id": 3207965,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Lockdown",
+      "description": "Learning new thing in lockdown",
+      "location": "Shanghai",
+      "date": "2022-04-30T17:35:00.000Z",
+      "time": "1:00",
+      "attendees": []
     }
   ]
 }
