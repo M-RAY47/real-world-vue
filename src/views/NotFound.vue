@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Oop!</h1>
-    <h2 class="message">{{ message }}</h2>
+    <h1>Oops!</h1>
+    <h3 class="message">{{ message }}</h3>
     <router-link :to="{ name: 'event-list' }"
       >Back to the list of events</router-link
     >
@@ -10,9 +10,15 @@
 
 <script>
 export default {
+  props: {
+    resource: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
-      message: "The page you are looking for is not here!",
+      message: `The ${this.resource} you are looking for is not here!`,
     };
   },
 };
