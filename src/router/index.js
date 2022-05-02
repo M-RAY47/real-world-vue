@@ -27,7 +27,7 @@ const routes = [
         })
         .catch((err) => {
           console.log(err);
-          next({ name: "404", params: { resource: "page" } });
+          next({ name: "404", params: { resource: "event" } });
           const notification = {
             type: "error",
             message: "There was a problem fetching event: " + err.message,
@@ -50,7 +50,7 @@ const routes = [
   },
   {
     path: "/:paathMatch(.*)*",
-    redirect: { name: "404", params: { resource: "event" } },
+    redirect: { name: "404", params: { resource: "page" } },
   },
 ];
 
