@@ -28,12 +28,12 @@ const routes = [
         .catch((err) => {
           console.log(err);
           next({ name: "404", params: { resource: "page" } });
-          // const notification = {
-          //   type: "error",
-          //   message: "There was a problem fetching event: " + err.message,
-          // };
-          // dispatch("notifications/add", notification, { root: true });
-          // console.log("This is the error:" + err.message);
+          const notification = {
+            type: "error",
+            message: "There was a problem fetching event: " + err.message,
+          };
+          store.dispatch("notifications/add", notification, { root: true });
+          console.log("This is the error:" + err.message);
         });
     },
   },
