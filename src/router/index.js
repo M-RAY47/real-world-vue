@@ -28,13 +28,17 @@ const routes = [
         })
         .catch((err) => {
           console.log(err);
-          next({ name: "404", params: { resource: "event" } });
-          const notification = {
-            type: "error",
-            message: "There was a problem fetching event: " + err.message,
-          };
-          store.dispatch("notifications/add", notification, { root: true });
-          console.log("This is the error:" + err.message);
+          if (err.response && err.response.status == 404) {
+            next({ name: "404", params: { resource: "event" } });
+            const notification = {
+              type: "error",
+              message: "There was a problem fetching event: " + err.message,
+            };
+            store.dispatch("notifications/add", notification, { root: true });
+            console.log("This is the error:" + err.message);
+          } else {
+            next({ name: "network-issue" });
+          }
         });
     },
   },
