@@ -6,21 +6,39 @@
       @input="updateValue"
       v-bind="$attrs"
       v-on="listeners"
+      type="text"
     />
   </div>
 </template>
 
-<script setup>
-import { computed } from "@vue/runtime-core";
+<script>
+// import { computed } from "@vue/runtime-core";
 // import { formFieldMixin } from "../mixin/formFieldMixin";
 // mixins: [formFieldMixin];
 
-const listeners = computed(() => {
-  return {
-    ...this.$listeners,
-    input: this.updateValue,
-  };
-});
+export default {
+  props: {
+    label: {
+      type: String,
+      default: "",
+    },
+    value: {
+      type: [Number, String],
+    }
+  },
+  methods: {
+    updateValue(e) {
+      this.$emit(e, e.target.value);
+    },
+  },
+};
+
+// const listeners = computed(() => {
+//   return {
+//     ...this.$listeners,
+//     input: this.updateValue,
+//   };
+// });
 </script>
 
 <style lang="scss" scoped></style>
