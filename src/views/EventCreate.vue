@@ -7,14 +7,7 @@
         <option v-for="cat in categories" :key="cat">{{ cat }}</option>
       </select>
       <h3>Name & describe your event</h3>
-      <div class="field">
-        <label>Title</label>
-        <input
-          v-model="event.title"
-          type="text"
-          placeholder="Add an even title"
-        />
-      </div>
+      <BaseInput label="title" v-model="event.title" />
       <div class="field">
         <label>Description</label>
         <input
