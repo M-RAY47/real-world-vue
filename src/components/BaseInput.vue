@@ -17,6 +17,7 @@
 // mixins: [formFieldMixin];
 
 export default {
+  inheritAttrs: false,
   props: {
     label: {
       type: String,
@@ -24,7 +25,7 @@ export default {
     },
     value: {
       type: [Number, String],
-    }
+    },
   },
   methods: {
     updateValue(e) {
