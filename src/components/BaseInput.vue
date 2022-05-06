@@ -1,7 +1,7 @@
 <template>
   <div>
     <label v-if="label">{{ label }}</label>
-    <input :value="value" @input="updateValue" v-bind="$attrs" />
+    <input :value="modelValue" @input="updateValue" v-bind="$attrs" />
   </div>
 </template>
 
@@ -18,11 +18,12 @@ export default {
       type: String,
       default: "",
     },
-    value: [String, Number],
+    modelValue: [String, Number],
   },
+  emits: ["update:modelValue"],
   methods: {
     updateValue(e) {
-      this.$emit("input", e.target.value);
+      this.$emit("update:modelValue", e.target.value);
     },
   },
 };
