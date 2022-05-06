@@ -8,9 +8,10 @@
       </select>
       <h3>Name & describe your event</h3>
       <BaseInput
-        label="title"
+        label="Title"
         v-model="event.title"
-        placeholder="Title"
+        placeholder="Add an event"
+        type="text"
         class="field"
       />
       <BaseInput
@@ -18,6 +19,7 @@
         v-model="event.description"
         placeholder="Add a description"
         class="field"
+        type="text"
       />
       <h3>Where is your event?</h3>
       <BaseInput
@@ -25,6 +27,7 @@
         v-model="event.location"
         placeholder="Add a location"
         class="field"
+        type="text"
       />
       <h3>When is your event?</h3>
       <div class="field">
