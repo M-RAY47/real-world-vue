@@ -1,13 +1,7 @@
 <template>
   <div>
     <label v-if="label">{{ label }}</label>
-    <input
-      :value="value"
-      @input="updateValue"
-      v-bind="$attrs"
-      v-on="listeners"
-      type="text"
-    />
+    <input :value="value" @input="updateValue" v-bind="$attrs" />
   </div>
 </template>
 
@@ -18,18 +12,17 @@
 
 export default {
   inheritAttrs: false,
+  name: "BaseInput",
   props: {
     label: {
       type: String,
       default: "",
     },
-    value: {
-      type: [Number, String],
-    },
+    value: [String, Number],
   },
   methods: {
     updateValue(e) {
-      this.$emit(e, e.target.value);
+      this.$emit("input", e.target.value);
     },
   },
 };
