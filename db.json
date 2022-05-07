@@ -622,6 +622,24 @@
       "date": "2022-04-30T17:35:00.000Z",
       "time": "1:00",
       "attendees": []
+    },
+    {
+      "id": 9608244,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "New nice Event",
+      "description": "Amazing event with all learning materials",
+      "location": "Shanghai",
+      "date": "2022-05-07T17:30:00.000Z",
+      "time": "17:00",
+      "attendees": []
     }
   ]
 }
