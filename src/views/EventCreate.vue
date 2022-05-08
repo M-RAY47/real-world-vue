@@ -35,13 +35,12 @@
         <label>Date</label>
         <datepicker v-model="event.date" placeholder="Select a date" />
       </div>
-      <div class="field">
-        <BaseSelect
-          label="Select a time"
-          :options="times"
-          v-model="event.time"
-        />
-      </div>
+      <BaseSelect
+        label="Select a time"
+        :options="times"
+        v-model="event.time"
+        class="field"
+      />
       <input type="submit" class="button -fill-gradient" value="submit" />
     </form>
   </div>
