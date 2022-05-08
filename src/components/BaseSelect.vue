@@ -21,6 +21,10 @@ export default {
   inheritAttrs: false,
   // mixins: [formFieldMixin],
   props: {
+    label: {
+      type: String,
+      default: "",
+    },
     options: {
       type: Array,
       required: true,
