@@ -640,6 +640,24 @@
       "date": "2022-05-07T17:30:00.000Z",
       "time": "17:00",
       "attendees": []
+    },
+    {
+      "id": 6332089,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "eduction",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Next level vue",
+      "description": "Learning next level vue",
+      "location": "Shanghai",
+      "date": "2022-05-09T15:24:00.000Z",
+      "time": "19:00",
+      "attendees": []
     }
   ]
 }
