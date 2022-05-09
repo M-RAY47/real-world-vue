@@ -240,4 +240,7 @@ select:focus::ms-value {
 select::ms-expand {
   opacity: 0;
 }
+.field {
+  margin-bottom: 24px;
+}
 </style>
