@@ -6,7 +6,14 @@
         label="Select a category"
         :options="categories"
         v-model="event.category"
+        @blur="v$.event.category.$touch()"
+        :class="{ error: v$.event.category.$error }"
       />
+      <template v-if="v$.event.category.$error">
+        <p v-if="v$.event.category.$invalid" class="errorMessage">
+          Category is required.
+        </p>
+      </template>
       <h3>Name & describe your event</h3>
       <BaseInput
         label="Title"
@@ -14,7 +21,14 @@
         placeholder="Add an event"
         type="text"
         class="field"
+        :class="{ error: v$.event.title.$error }"
+        @blur="v$.event.tilte.$touch()"
       />
+      <template v-if="v$.event.title.$error">
+        <p v-if="v$.event.title.$invalid" class="errorMessage">
+          title is required.
+        </p>
+      </template>
       <BaseInput
         label="Description"
         v-model="event.description"
@@ -50,8 +64,11 @@
 import Datepicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
 import NProgress from "nprogress";
+import useVuelidate from "@vuelidate/core";
+import { required } from "@vuelidate/validators";
 
 export default {
+  setup: () => ({ v$: useVuelidate() }),
   components: { Datepicker },
   data() {
     const times = [];
@@ -62,6 +79,18 @@ export default {
       times,
       categories: this.$store.state.categories,
       event: this.createFreshEvent(),
+    };
+  },
+  validations() {
+    return {
+      event: {
+        category: { required },
+        title: { required },
+        description: { required },
+        location: { required },
+        date: { required },
+        time: { required },
+      },
     };
   },
   methods: {
