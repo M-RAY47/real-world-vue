@@ -54,7 +54,14 @@
         :options="times"
         v-model="event.time"
         class="field"
+        @blur="v$.event.time.$touch()"
+        :class="{ error: v$.event.time.$error }"
       />
+      <template v-if="v$.event.time.$error">
+        <p v-if="v$.event.time.$invalid" class="errorMessage">
+          title is required.
+        </p>
+      </template>
       <BaseButton type="submit" buttonClass="-fill-gradient">Submit</BaseButton>
     </form>
   </div>
