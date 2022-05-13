@@ -22,7 +22,7 @@
         type="text"
         class="field"
         :class="{ error: v$.event.title.$error }"
-        @blur="v$.event.tilte.$touch()"
+        @blur="v$.event.title.$touch()"
       />
       <template v-if="v$.event.title.$error">
         <p v-if="v$.event.title.$invalid" class="errorMessage">
