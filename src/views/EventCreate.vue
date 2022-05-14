@@ -61,8 +61,18 @@
       <h3>When is your event?</h3>
       <div class="field">
         <label>Date</label>
-        <datepicker v-model="event.date" placeholder="Select a date" />
+        <datepicker
+          v-model="event.date"
+          placeholder="Select a date"
+          :inputClassName="{ error: v$.event.date.$error }"
+          @closed="v$.event.date.$touch()"
+        />
       </div>
+      <template v-if="v$.event.date.$error">
+        <p v-if="v$.event.date.$invalid" class="errorMessage">
+          date is required.
+        </p>
+      </template>
       <BaseSelect
         label="Select a time"
         :options="times"
