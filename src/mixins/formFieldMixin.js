@@ -5,11 +5,12 @@ export const formFieldMixin = {
       type: String,
       default: "",
     },
-    value: [String, Number],
+    modelValue: [String, Number],
   },
+  emits: ["update:modelValue"],
   methods: {
-    updateValue(event) {
-      this.$emit("input", event.target.value);
+    updateValue(e) {
+      this.$emit("update:modelValue", e.target.value);
     },
   },
 };
