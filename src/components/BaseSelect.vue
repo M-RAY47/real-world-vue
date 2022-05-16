@@ -19,7 +19,7 @@ import { formFieldMixin } from "@/mixins/formFieldMixin";
 export default {
   name: "BaseSelect",
   inheritAttrs: false,
-  // mixins: [formFieldMixin],
+  mixins: [formFieldMixin],
   props: {
     label: {
       type: String,
