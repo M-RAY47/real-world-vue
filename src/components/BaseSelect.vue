@@ -25,7 +25,6 @@ export default {
       type: Array,
       required: true,
     },
-    modelValue: [String, Number],
   },
   emits: ["update:modelValue"],
   methods: {
