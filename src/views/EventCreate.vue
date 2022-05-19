@@ -64,7 +64,7 @@
         <datepicker
           v-model="event.date"
           placeholder="Select a date"
-          :inputClassName="{ error: v$.event.date.$error }"
+          inputClassName="{ error: v$.event.date.$error }"
           @closed="v$.event.date.$touch()"
         />
       </div>
