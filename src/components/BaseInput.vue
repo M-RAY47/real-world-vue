@@ -8,7 +8,6 @@
 <script>
 // import { computed } from "@vue/runtime-core";
 import { formFieldMixin } from "../mixin/formFieldMixin";
-// mixins: [formFieldMixin];
 
 export default {
   inheritAttrs: false,
@@ -20,6 +19,7 @@ export default {
     },
     modelValue: [String, Number],
   },
+  mixins: [formFieldMixin];
   emits: ["update:modelValue"],
   methods: {
     updateValue(e) {
