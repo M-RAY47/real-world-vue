@@ -7,7 +7,7 @@
 
 <script>
 // import { computed } from "@vue/runtime-core";
-// import { formFieldMixin } from "../mixin/formFieldMixin";
+import { formFieldMixin } from "../mixin/formFieldMixin";
 // mixins: [formFieldMixin];
 
 export default {
