@@ -20,7 +20,6 @@ export default {
     modelValue: [String, Number],
   },
   mixins: [formFieldMixin];
-  emits: ["update:modelValue"],
   methods: {
     updateValue(e) {
       this.$emit("update:modelValue", e.target.value);
