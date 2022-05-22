@@ -12,6 +12,7 @@ import { formFieldMixin } from "../mixin/formFieldMixin";
 export default {
   inheritAttrs: false,
   name: "BaseInput",
+  mixins: [formFieldMixin],
   props: {
     label: {
       type: String,
@@ -19,7 +20,6 @@ export default {
     },
     modelValue: [String, Number],
   },
-  mixins: [formFieldMixin],
 };
 </script>
 
