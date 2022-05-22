@@ -13,13 +13,6 @@ export default {
   inheritAttrs: false,
   name: "BaseInput",
   mixins: [formFieldMixin],
-  props: {
-    label: {
-      type: String,
-      default: "",
-    },
-    modelValue: [String, Number],
-  },
 };
 </script>
 
