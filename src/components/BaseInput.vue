@@ -21,13 +21,6 @@ export default {
   },
   mixins: [formFieldMixin],
 };
-
-// const listeners = computed(() => {
-//   return {
-//     ...this.$listeners,
-//     input: this.updateValue,
-//   };
-// });
 </script>
 
 <style lang="scss" scoped></style>
