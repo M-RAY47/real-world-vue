@@ -10,7 +10,6 @@
 import { formFieldMixin } from "../mixin/formFieldMixin";
 
 export default {
-  inheritAttrs: false,
   name: "BaseInput",
   mixins: [formFieldMixin],
 };
