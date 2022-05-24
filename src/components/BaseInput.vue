@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { formFieldMixin } from "../mixin/formFieldMixin";
+import { formFieldMixin } from "../mixins/formFieldMixin";
 
 export default {
   name: "BaseInput",
