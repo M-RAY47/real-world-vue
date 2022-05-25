@@ -5,6 +5,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "nprogress/nprogress.css";
+import DateFilter from "./filters/date";
 
 const app = createApp(App);
 const requireComponent = require.context(
@@ -23,6 +24,7 @@ requireComponent.keys().forEach((fileName) => {
   app.component(componentName, componentConfig.default || componentConfig);
 });
 
+app.use("date", DateFilter);
 app.use(router);
 app.use(store);
 app.mount("#app");
