@@ -5,7 +5,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "nprogress/nprogress.css";
-import DateFilter from "./filters/date";
+import DateFilter from "./mixins/date";
 
 const app = createApp(App);
 const requireComponent = require.context(
