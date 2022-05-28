@@ -5,9 +5,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "nprogress/nprogress.css";
-import DateFilter from "./mixins/date";
+import dateMixins from "./mixins/dateMixins";
 
-const app = createApp(App);
+const app = createApp({
+  extends: App,
+  mixins: [dateMixins],
+});
 const requireComponent = require.context(
   "./components",
   false,
@@ -24,7 +27,6 @@ requireComponent.keys().forEach((fileName) => {
   app.component(componentName, componentConfig.default || componentConfig);
 });
 
-app.use("date", DateFilter);
 app.use(router);
 app.use(store);
 app.mount("#app");
