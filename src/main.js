@@ -7,10 +7,7 @@ import store from "./store";
 import "nprogress/nprogress.css";
 import dateMixins from "./mixins/dateMixins";
 
-const app = createApp({
-  extends: App,
-  mixins: [dateMixins],
-});
+const app = createApp(App);
 const requireComponent = require.context(
   "./components",
   false,
@@ -26,7 +23,7 @@ requireComponent.keys().forEach((fileName) => {
 
   app.component(componentName, componentConfig.default || componentConfig);
 });
-
 app.use(router);
+app.mixin(dateMixins);
 app.use(store);
 app.mount("#app");
