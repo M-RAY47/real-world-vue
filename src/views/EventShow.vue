@@ -30,7 +30,9 @@
   </div>
 </template>
 <script>
+import { dateMixins } from "@/mixins/dateMixins";
 export default {
+  mixins: [dateMixins],
   props: {
     event: {
       type: Object,
