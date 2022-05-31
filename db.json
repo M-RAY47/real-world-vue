@@ -563,7 +563,7 @@
       "title": "Eat Vegetables",
       "description": "Will eat healthy vegetables",
       "location": "Shanghai",
-      "date": "",
+      "date": "2022-04-15T17:22:00.000Z",
       "time": "10:00",
       "attendees": []
     },
@@ -581,7 +581,7 @@
       "title": "Coding Vuex",
       "description": "I just debugged a vuex code",
       "location": "Shanghai",
-      "date": "",
+      "date": "2022-04-16T17:23:00.000Z",
       "time": "11:00",
       "attendees": []
     },
@@ -599,7 +599,7 @@
       "title": "Learning How to learn",
       "description": "Revise learning how to learn course",
       "location": "Shanghai",
-      "date": "",
+      "date": "2022-04-16T17:10:00.000Z",
       "time": "10:00",
       "attendees": [
         "M.RAY"
