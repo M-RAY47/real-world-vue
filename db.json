@@ -694,6 +694,24 @@
       "date": "2022-05-14T15:49:00.000Z",
       "time": "23:00",
       "attendees": []
+    },
+    {
+      "id": 2077579,
+      "user": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abcd123",
+        "name": "M.RAY"
+      },
+      "title": "Learning Flutter",
+      "description": "Learn new things",
+      "location": "Shanghai",
+      "date": "2022-06-01T13:21:00.000Z",
+      "time": "9:00",
+      "attendees": []
     }
   ]
 }
